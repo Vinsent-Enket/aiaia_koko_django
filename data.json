@@ -1,0 +1,31 @@
+[
+  {
+    "model": "catalog.category",
+    "pk": 4,
+    "fields": {
+      "name": "Электроника",
+      "description": "Электроника, батареи, илон макс"
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 5,
+    "fields": {
+      "name": "Мебель",
+      "description": "Икея, леруа"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 5,
+    "fields": {
+      "name": "Смарт",
+      "description": "Описание",
+      "images": "",
+      "category": 4,
+      "price": 0,
+      "date_of_creation": "2023-12-19",
+      "date_of_change": "2023-12-19"
+    }
+  }
+]
