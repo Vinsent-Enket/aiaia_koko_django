@@ -33,7 +33,6 @@ class Product(models.Model):
     name = models.CharField(max_length=150, verbose_name='Название товара')
     description = models.CharField(max_length=250, verbose_name='Описание товара')
     images = models.ImageField(upload_to='product/', verbose_name='Картинка', **NULLABLE)
-    #category = models.CharField(max_length=150, verbose_name='Категория')
     category = models.ForeignKey(Category, on_delete=models.CASCADE, verbose_name='Категория')
 
     price = models.IntegerField(verbose_name='Цена')
@@ -42,7 +41,7 @@ class Product(models.Model):
 
     def __str__(self):
         # Строковое отображение объекта
-        return f'{self.name} {self.price}'
+        return f'{self.name}'
 
     class Meta:
         verbose_name = 'товар'  # Настройка для наименования одного объекта
