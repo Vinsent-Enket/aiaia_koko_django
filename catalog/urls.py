@@ -11,6 +11,6 @@ urlpatterns = [
                   path('', index, name='index'),
                   path('catalog', catalog, name='catalog'),
                   path('contacts', contacts, name='contacts'),
-                  path('product_details', product_details, name='product_details'),
+                  path('product_details/<int:pk>', product_details, name='product_details'),
 
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
