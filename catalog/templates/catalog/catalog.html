@@ -20,7 +20,7 @@
             <button type="button" class="w-100 btn btn-lg btn-outline-primary">Купить сейчас</button>
             <button type="button" class="w-100 btn btn-lg btn-outline-primary">Добавить в корзину</button>
             <button type="button" class="w-100 btn btn-lg btn-outline-primary">Добавить в избранное</button>
-            <a href="{% url 'catalog:product_details' '1'%}" class="w-100 btn btn-lg btn-outline-primary">К товару</a>
+            <a href="{% url 'catalog:product_details' object.pk %}" class="w-100 btn btn-lg btn-outline-primary">К товару</a>
         </div>
     </div>
 
