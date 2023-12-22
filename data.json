@@ -1,7 +1,7 @@
 [
   {
     "model": "catalog.category",
-    "pk": 4,
+    "pk": 0,
     "fields": {
       "name": "Электроника",
       "description": "Электроника, батареи, илон макс"
@@ -9,7 +9,7 @@
   },
   {
     "model": "catalog.category",
-    "pk": 5,
+    "pk": 1,
     "fields": {
       "name": "Мебель",
       "description": "Икея, леруа"
@@ -17,7 +17,7 @@
   },
   {
     "model": "catalog.product",
-    "pk": 5,
+    "pk": 0,
     "fields": {
       "name": "Смарт",
       "description": "Описание",
@@ -26,6 +26,58 @@
       "price": 0,
       "date_of_creation": "2023-12-19",
       "date_of_change": "2023-12-19"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 1,
+    "fields": {
+      "name": "Пистолет",
+      "description": "он стреляет",
+      "images": "",
+      "category": 4,
+      "price": 1,
+      "date_of_creation": "2023-12-21",
+      "date_of_change": "2023-12-21"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 2,
+    "fields": {
+      "name": "яблоко",
+      "description": "его едят",
+      "images": "",
+      "category": 5,
+      "price": 2,
+      "date_of_creation": "2023-12-21",
+      "date_of_change": "2023-12-21"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 3,
+    "fields": {
+      "name": "Мем с пеппой",
+      "description": "просто мем",
+      "images": "product/apu-upal-i-uronil-edu.jpg",
+      "category": 5,
+      "price": 0,
+      "date_of_creation": "2023-12-21",
+      "date_of_change": "2023-12-21"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 4,
+    "fields": {
+      "name": "нфт токен",
+      "description": "кто еще их покупает?",
+      "images": "product/photo_2023-06-30_22.05.15.jpeg",
+      "category": 4,
+      "price": 99999,
+      "date_of_creation": "2023-12-21",
+      "date_of_change": "2023-12-21"
     }
   }
 ]

@@ -17,4 +17,12 @@ def catalog(request):
 
 def contacts(request):
     return render(request, 'catalog/contacts.html')
+
+def product_details(request, pk):
+    product = Product.objects.get(pk=pk)
+
+    context = {
+        'object': product
+    }
+    return render(request, 'catalog/product_details.html', context)
 # Create your views here.

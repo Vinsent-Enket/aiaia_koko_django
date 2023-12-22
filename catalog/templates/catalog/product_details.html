@@ -5,25 +5,22 @@
 
 
 {% block content %}
-{% for object in object_list %}
+
 <div class="col">
     <div class="card mb-4 rounded-3 shadow-sm">
         <div class="card-header py-3">
-            <h4 class="my-0 fw-normal"> {{object}} </h4>
+            <h4 class="my-0 fw-normal"> {{object_list.1}} </h4>
         </div>
         <div class="card-body">
-            <h1 class="card-title pricing-card-title"> {{object.price}}$ </h1>
+            <h1 class="card-title pricing-card-title"> {{object}}$ </h1>
             <img src="{{ object.images|mymedia }}" class="card-img-top" alt="...">
             <img src="{% mediapath object.images %}" />
-            <p>{{ object.description|trim_to }}</p>
-            <p>айдишник - {{ object.pk }}</p>
+            <p>{{ object.description}}</p>
             <button type="button" class="w-100 btn btn-lg btn-outline-primary">Купить сейчас</button>
             <button type="button" class="w-100 btn btn-lg btn-outline-primary">Добавить в корзину</button>
             <button type="button" class="w-100 btn btn-lg btn-outline-primary">Добавить в избранное</button>
-            <a href="{% url 'catalog:product_details' '1'%}" class="w-100 btn btn-lg btn-outline-primary">К товару</a>
         </div>
     </div>
 
 </div>
-{% endfor %}
 {% endblock %}
