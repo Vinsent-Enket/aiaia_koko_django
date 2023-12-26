@@ -4,3 +4,4 @@ sqlparse
 psycopg2
 pillow
 ipython
+pytils

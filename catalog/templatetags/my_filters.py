@@ -16,4 +16,3 @@ def trim_to(text):
 def mymedia(value):
     if value:
         return f'/media/{value}'
-    return '#'
