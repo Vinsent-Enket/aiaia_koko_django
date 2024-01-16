@@ -10,21 +10,10 @@ def index(request):
     return render(request, 'catalog/index.html')
 
 
-def contacts(request):
-    return render(request, 'catalog/contacts.html')
-
-
-def ProductDetailView_2(request, pk):
-    context = {
-        'object_list': Product.objects.all()[:3],
-        'blog_list': Blog.objects.all()
-    }
-    return render(request, 'catalog/index.html', context)
-
-
 class CatalogListView(ListView):
     model = Product
     template_name = 'catalog/catalog_of_products.html'
+    #template_name = 'catalog/catalog_test.html'
 
 
 class ProductDetailView(DetailView):
