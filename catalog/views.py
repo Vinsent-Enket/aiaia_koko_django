@@ -3,7 +3,11 @@ from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from pytils.translit import slugify
 
+
+from catalog.forms import ProductForm
 from catalog.models import Product, Blog
+
+
 
 
 def index(request):
@@ -14,6 +18,11 @@ class CatalogListView(ListView):
     model = Product
     template_name = 'catalog/catalog_of_products.html'
     #template_name = 'catalog/catalog_test.html'
+
+class ProductCreateView(CreateView):
+    model = Product
+    form_class = ProductForm
+    success_url = reverse_lazy('catalog:catalog_of_products')
 
 
 class ProductDetailView(DetailView):

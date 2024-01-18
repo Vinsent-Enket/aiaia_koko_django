@@ -1,13 +1,24 @@
 from datetime import datetime
 
 import django
+from django.conf import settings
 from django.db import models
 from django.utils import timezone
 from pytils.translit import slugify
+from django.core.exceptions import ValidationError
+from django.utils.translation import gettext_lazy as _
 
 # Create your models here.
 NULLABLE = {'blank': True, 'null': True}
 now = django.utils.timezone.now
+
+
+def validate_even(value):
+    if value in settings.FORBIDDEN_WORDS:
+        raise ValidationError(
+            _("%(value) использование запрещено"),
+            params={"value": value},
+        )
 
 
 class Category(models.Model):
@@ -43,8 +54,8 @@ class Blog(models.Model):
 
 
 class Product(models.Model):
-    name = models.CharField(max_length=150, verbose_name='Название товара')
-    description = models.CharField(max_length=250, verbose_name='Описание товара')
+    name = models.CharField(max_length=150, verbose_name='Название товара', validators=[validate_even])
+    description = models.CharField(max_length=250, verbose_name='Описание товара', validators=[validate_even])
     images = models.ImageField(upload_to='product/', verbose_name='Картинка', **NULLABLE,
                                default='apu-upal-i-uronil-edu.jpg')
     category = models.ForeignKey(Category, on_delete=models.CASCADE, verbose_name='Категория')

@@ -1,3 +1,5 @@
 В форме создания рассылки нельзя выбрать несколько клиентов
 ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)
 что удалось выяснить, нужно установить ssl серты, как это сделать в обычном пайтон я нашел, но не в виртуальном окружении, чекал вот этот сайт https://coderoad.ru/42098126/Mac-OSX-python-ssl-SSLError-SSL-CERTIFICATE_VERIFY_FAILED-не-удалось-проверить
+
+исправить админку что бы можно было редактировать карточки там
